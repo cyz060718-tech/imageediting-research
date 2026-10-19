@@ -16,7 +16,7 @@
 
 ### Windows 双击运行
 
-先安装 64 位 Python 3.10 至 3.13，建议选 3.11 或 3.12。完整解压仓库后依次双击：
+适用于 Windows 10/11 x64 和标准 64 位 CPython 3.10 至 3.13，建议选 3.11 或 3.12。不是 ARM64 或自由线程 Python 环境。完整解压仓库后依次双击：
 
 1. **安装环境.bat**：创建当前项目的 `.venv`，安装 PyTorch 和项目依赖，并检查实际运算和网页代码导入。不下载模型，不修改系统 Python。
 2. **下载模型.bat**：下载基础编辑、选区和删除模型，并进行目录检查；LaMa 下载脚本还会校验文件摘要。默认包含 CLIPSeg、Inpaint、IP2P、CLIP、Grounding DINO、SAM 和 LaMa，以便使用网页各模式。
@@ -26,7 +26,7 @@
 
 安装脚本会依次尝试已安装的 Python 3.12、3.11、3.10、3.13，再尝试 PATH 中的 Python。**不需要专门安装 3.12**，只有真正执行成功的解释器才会被选用，新版 Python 启动器的负数错误码也会被视为失败。有效的 `.venv` 会直接复用；若环境已失效，脚本会先找到可用解释器，再把原环境重命名为 `.venv.backup_时间戳`，随后创建新环境。不会自动删除备份；若没有可用解释器，原环境保持原样。
 
-安装环境默认在检测到可用 NVIDIA 驱动时选择官方 cu130 安装源，否则使用 CPU 模式；最后验证真实矩阵运算。需要其他构建时先设置 `TORCH_INDEX_URL`，安装步骤参考 [PyTorch 官方说明](https://pytorch.org/get-started/locally/)。已有 PyTorch 能在目标模式下执行运算时会复用它。也可以在命令提示符中使用：
+安装环境根据 NVIDIA 驱动和显卡计算能力选择官方 cu118、cu126、cu128、cu130 或 CPU 构建。较早的显卡使用 Torch 2.7.1 与 torchvision 0.22.1，新路径使用 Torch 2.11.0 与 torchvision 0.26.0；已经能通过运算验证的环境直接复用。验证包括矩阵乘法、卷积和 torchvision NMS，而不只是能否导入。自动模式下 GPU 安装或验证失败会明确提示并尝试 CPU；手动指定 `TORCH_INDEX_URL` 时失败会停止，保留用户的构建选择。安装源和版本组合参考 [PyTorch 官方说明](https://pytorch.org/get-started/previous-versions/)。也可以在命令提示符中使用：
 
 ```bat
 安装环境.bat cpu
@@ -34,6 +34,8 @@
 ```
 
 `cpu` 强制选择 CPU 模式。`minimal` 只下载默认保真流程所需的 Inpaint、Grounding DINO、SAM 和 LaMa；其他网页模式需要再次运行不带参数的下载脚本。已有模型路径环境变量和 `HF_ENDPOINT` 均会保留。自动化运行可设置 `IMAGEEDIT_NO_PAUSE=1` 关闭末尾暂停。
+
+如果同时安装了多个 Python，可先设置 `IMAGEEDIT_PYTHON` 为所需解释器的完整路径。依赖使用已发布的二进制 wheel，避免要求使用者额外安装编译器。新电脑若缺少 Visual C++ 运行库，需要安装 [Microsoft 官方 x64 运行库](https://aka.ms/vc14/vc_redist.x64.exe)。更详细的条件、故障定位和测试范围见 [Windows 安装说明](docs/windows-install.md)。
 
 ### 手动安装
 
@@ -65,7 +67,7 @@ python download_models.py clipseg ip2p clip
 
 下载脚本默认使用既有的 Hugging Face 镜像配置；需要直连官方站点时，先设置 `$env:HF_ENDPOINT='https://huggingface.co'`。已有本地权重可以通过 IMAGE_EDIT_MODEL_DIR 和 IMAGE_EDIT_EXTRA_MODEL_DIR 指向各自目录，无需复制。
 
-依赖版本记录来自本项目现有环境；本次精简验证复用了该环境，未声称已在所有平台完成全新安装。可选语言模型功能还需单独安装 openai 并设置 LLM_API_KEY 等环境变量；默认规则模式不需要密钥。不要将密钥提交到 Git。
+依赖使用固定版本，Windows 安装另有多 Python 版本的全新安装自动检查。是否通过请以仓库 Actions 中对应提交的检查结果为准；CPU 云端测试不能替代每种实体显卡的实测。可选语言模型功能还需单独安装 openai 并设置 LLM_API_KEY 等环境变量；默认规则模式不需要密钥。不要将密钥提交到 Git。
 
 ## 使用方式
 

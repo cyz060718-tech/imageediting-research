@@ -20,6 +20,7 @@ echo ==================================================
 if not "%~1"=="" if /i not "%~1"=="cpu" goto :usage
 if not exist "requirements.txt" goto :missing_project
 if not exist "bootstrap.py" goto :missing_project
+if not exist "tools\install_torch.py" goto :missing_project
 
 echo [1/5] Check or create the project virtual environment...
 if not exist "%ENV_PY%" goto :find_python
@@ -28,6 +29,7 @@ if "%ERRORLEVEL%"=="0" goto :environment_ready
 echo Existing .venv is unusable. Looking for an installed Python before repair.
 
 :find_python
+if defined IMAGEEDIT_PYTHON goto :explicit_python
 where py >nul 2>nul
 if not "%ERRORLEVEL%"=="0" goto :try_path_python
 for %%V in (3.12 3.11 3.10 3.13) do (
@@ -37,9 +39,16 @@ for %%V in (3.12 3.11 3.10 3.13) do (
 :try_path_python
 where python >nul 2>nul
 if not "%ERRORLEVEL%"=="0" goto :missing_python
-python -c "import struct,sys; sys.exit(0 if (3,10) <= sys.version_info[:2] <= (3,13) and struct.calcsize('P') == 8 else 1)" >nul 2>nul
+python -c "import struct,sys,platform,sysconfig; sys.exit(0 if (3,10) <= sys.version_info[:2] <= (3,13) and struct.calcsize('P') == 8 and platform.machine().lower() in ('amd64','x86_64') and not sysconfig.get_config_var('Py_GIL_DISABLED') else 1)" >nul 2>nul
 if not "%ERRORLEVEL%"=="0" goto :missing_python
 set "BASE_PY=python"
+set "BASE_ARGS="
+goto :create_environment
+
+:explicit_python
+"%IMAGEEDIT_PYTHON%" -c "import struct,sys,platform,sysconfig; sys.exit(0 if (3,10) <= sys.version_info[:2] <= (3,13) and struct.calcsize('P') == 8 and platform.machine().lower() in ('amd64','x86_64') and not sysconfig.get_config_var('Py_GIL_DISABLED') else 1)" >nul 2>nul
+if not "%ERRORLEVEL%"=="0" goto :missing_python
+set "BASE_PY=%IMAGEEDIT_PYTHON%"
 set "BASE_ARGS="
 
 :create_environment
@@ -55,36 +64,24 @@ if not "%ERRORLEVEL%"=="0" goto :bad_environment
 
 :environment_ready
 echo [2/5] Update pip, setuptools and wheel...
-"%ENV_PY%" -m pip install --upgrade pip setuptools wheel --retries 3 --timeout 60
+"%ENV_PY%" -m pip install --only-binary=:all: --upgrade pip setuptools wheel --retries 3 --timeout 60
 if not "%ERRORLEVEL%"=="0" goto :fail
 
-set "USE_CUDA=0"
-set "TASK_TORCH_INDEX=https://download.pytorch.org/whl/cpu"
-if /i "%~1"=="cpu" goto :torch_selected
-where nvidia-smi >nul 2>nul
-if not "%ERRORLEVEL%"=="0" goto :torch_selected
-nvidia-smi -L >nul 2>nul
-if not "%ERRORLEVEL%"=="0" goto :torch_selected
-set "USE_CUDA=1"
-set "TASK_TORCH_INDEX=https://download.pytorch.org/whl/cu130"
-:torch_selected
-if defined TORCH_INDEX_URL set "TASK_TORCH_INDEX=%TORCH_INDEX_URL%"
-echo [3/5] Check PyTorch. Package index: %TASK_TORCH_INDEX%
-if "%USE_CUDA%"=="0" echo CPU mode selected. Image generation may be slow.
-"%ENV_PY%" -c "import bootstrap; import torch,torchvision; assert %USE_CUDA% or torch.version.cuda is None, 'CPU build required'; device='cuda' if %USE_CUDA% else 'cpu'; x=torch.ones((16,16),device=device); assert float((x@x).sum().cpu()) == 4096.0; print('Existing PyTorch works',torch.__version__,device)" >nul 2>nul
-if "%ERRORLEVEL%"=="0" goto :dependencies
-"%ENV_PY%" -m pip install --upgrade --force-reinstall torch torchvision --index-url "%TASK_TORCH_INDEX%" --retries 3 --timeout 60
+set "TASK_MODE=auto"
+if /i "%~1"=="cpu" set "TASK_MODE=cpu"
+echo [3/5] Select and verify a compatible PyTorch build...
+"%ENV_PY%" "tools\install_torch.py" %TASK_MODE%
 if not "%ERRORLEVEL%"=="0" goto :fail
 
 :dependencies
 echo [4/5] Install project requirements...
-"%ENV_PY%" -m pip install -r "requirements.txt" --retries 3 --timeout 60
+"%ENV_PY%" -m pip install --only-binary=:all: -r "requirements.txt" --retries 3 --timeout 60
 if not "%ERRORLEVEL%"=="0" goto :fail
 "%ENV_PY%" -m pip check
 if not "%ERRORLEVEL%"=="0" goto :fail
 
 echo [5/5] Verify imports and actual computation without loading models...
-"%ENV_PY%" -c "import bootstrap; import torch,torchvision,gradio,diffusers,transformers,accelerate,safetensors,huggingface_hub,cv2,lpips,numpy,PIL,pycocotools; import app; device='cuda' if %USE_CUDA% else 'cpu'; x=torch.ones((16,16),device=device); assert float((x@x).sum().cpu()) == 4096.0; print('PyTorch',torch.__version__,'mode',device); print('Web app and dependency imports passed')"
+"%ENV_PY%" -c "import bootstrap; import torch,torchvision,gradio,diffusers,transformers,accelerate,safetensors,huggingface_hub,cv2,lpips,numpy,PIL,pycocotools; import app; device='cuda' if torch.cuda.is_available() else 'cpu'; x=torch.ones((16,16),device=device); assert float((x@x).sum().cpu()) == 4096.0; print('PyTorch',torch.__version__,'mode',device); print('Web app and dependency imports passed')"
 if not "%ERRORLEVEL%"=="0" goto :fail
 echo.
 echo SUCCESS. Next run the model-download BAT, then start.bat.
@@ -93,7 +90,7 @@ popd
 exit /b 0
 
 :try_launcher
-py -%1 -c "import struct,sys; sys.exit(0 if (3,10) <= sys.version_info[:2] <= (3,13) and struct.calcsize('P') == 8 else 1)" >nul 2>nul
+py -%1 -c "import struct,sys,platform,sysconfig; sys.exit(0 if (3,10) <= sys.version_info[:2] <= (3,13) and struct.calcsize('P') == 8 and platform.machine().lower() in ('amd64','x86_64') and not sysconfig.get_config_var('Py_GIL_DISABLED') else 1)" >nul 2>nul
 if not "%ERRORLEVEL%"=="0" exit /b 1
 set "BASE_PY=py"
 set "BASE_ARGS=-%1"
@@ -101,7 +98,7 @@ echo Using installed Python %1.
 exit /b 0
 
 :check_environment
-"%ENV_PY%" -c "import struct,sys; assert (3,10) <= sys.version_info[:2] <= (3,13), 'Python 3.10 through 3.13 required'; assert struct.calcsize('P') == 8, '64-bit Python required'; assert sys.prefix != sys.base_prefix, 'Invalid project venv'; print('Python',sys.version.split()[0]); print('Environment',sys.executable)"
+"%ENV_PY%" -c "import struct,sys,platform,sysconfig; assert platform.machine().lower() in ('amd64','x86_64') and not sysconfig.get_config_var('Py_GIL_DISABLED'), 'Standard x64 CPython required'; assert (3,10) <= sys.version_info[:2] <= (3,13), 'Python 3.10 through 3.13 required'; assert struct.calcsize('P') == 8, '64-bit Python required'; assert sys.prefix != sys.base_prefix, 'Invalid project venv'; print('Python',sys.version.split()[0]); print('Environment',sys.executable)"
 exit /b %ERRORLEVEL%
 
 :missing_project

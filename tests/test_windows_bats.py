@@ -50,7 +50,7 @@ class Stub {
 
 class BatchFormatTests(unittest.TestCase):
     def test_ascii_crlf_and_inline_python(self):
-        for name in (INSTALL, DOWNLOAD):
+        for name in (INSTALL, DOWNLOAD, 'start.bat'):
             with self.subTest(script=name):
                 raw = (REPO / name).read_bytes()
                 text = raw.decode('ascii')
@@ -74,7 +74,7 @@ class WindowsBatchTests(unittest.TestCase):
         cls.stub = Path(cls.build.name) / 'stub.exe'
         subprocess.run([str(compiler), '/nologo', '/target:exe', '/out:' + str(cls.stub), str(source)], check=True, capture_output=True)
 
-    def run_script(self, script=INSTALL, args=(), existing=False, invalid=False, **settings):
+    def run_script(self, script=INSTALL, args=(), existing=False, invalid=False, explicit=False, **settings):
         case = tempfile.TemporaryDirectory(prefix='bat_\u4e2d\u6587 & ! ')
         self.addCleanup(case.cleanup)
         root = Path(case.name) / 'project with spaces'
@@ -82,7 +82,7 @@ class WindowsBatchTests(unittest.TestCase):
         for name in (INSTALL, DOWNLOAD, 'requirements.txt', 'bootstrap.py', 'download_models.py'):
             shutil.copy2(REPO / name, root / name)
         (root / 'tools').mkdir()
-        for name in ('download_advanced_models.py', 'download_lama.py'):
+        for name in ('download_advanced_models.py', 'download_lama.py', 'install_torch.py'):
             shutil.copy2(REPO / 'tools' / name, root / 'tools' / name)
         tools = Path(case.name) / 'mock tools'
         tools.mkdir()
@@ -95,10 +95,12 @@ class WindowsBatchTests(unittest.TestCase):
             (root / '.venv/invalid.marker').write_text('preserve me')
         log = Path(case.name) / 'commands.log'
         env = {k: v for k, v in os.environ.items() if not k.startswith('TEST_')}
-        for key in ('TORCH_INDEX_URL', 'HF_ENDPOINT'):
+        for key in ('TORCH_INDEX_URL', 'HF_ENDPOINT', 'IMAGEEDIT_PYTHON'):
             env.pop(key, None)
         env.update(PATH=str(tools) + os.pathsep + str(Path(os.environ['SystemRoot']) / 'System32'), IMAGEEDIT_NO_PAUSE='1', TEST_BAT_LOG=str(log), PYTHONIOENCODING='utf-8')
         env.update(settings)
+        if explicit:
+            env['IMAGEEDIT_PYTHON'] = str(tools / 'python.exe')
         command = 'cmd.exe /d /s /c ""' + str(root / script) + '"' + ''.join(' ' + a for a in args) + '"'
         result = subprocess.run(command, cwd=case.name, env=env, capture_output=True, timeout=30)
         output = (result.stdout + result.stderr).decode('utf-8', errors='replace')
@@ -112,12 +114,18 @@ class WindowsBatchTests(unittest.TestCase):
         self.assertIn('Using installed Python 3.10.', output)
         self.assertIn('-3.10 | -m | venv', calls)
         self.assertNotIn('-3.12 | -m | venv', calls)
-        self.assertIn('--force-reinstall', calls)  # Negative torch failure must reinstall.
+        self.assertIn('tools\\install_torch.py | auto', calls)
 
     def test_path_python_fallback(self):
         code, output, calls, _ = self.run_script(TEST_MISSING_VERSIONS='-3.12;-3.11;-3.10;-3.13')
         self.assertEqual(code, 0, output)
         self.assertIn('python.exe : -m | venv', calls)
+
+    def test_explicit_python_overrides_launcher(self):
+        code, output, calls, _ = self.run_script(explicit=True, TEST_MISSING_VERSIONS='-3.12;-3.11;-3.10;-3.13')
+        self.assertEqual(code, 0, output)
+        self.assertIn('python.exe : -m | venv', calls)
+        self.assertNotIn('py.exe :', calls)
 
     def test_broken_environment_is_preserved_before_recreation(self):
         code, output, calls, root = self.run_script(invalid=True, TEST_MISSING_VERSIONS='-3.12;-3.11')
@@ -142,11 +150,11 @@ class WindowsBatchTests(unittest.TestCase):
     def test_cpu_skips_gpu_probe(self):
         code, output, calls, _ = self.run_script(args=('cpu',))
         self.assertEqual(code, 0, output)
-        self.assertIn('https://download.pytorch.org/whl/cpu', calls)
+        self.assertIn('tools\\install_torch.py | cpu', calls)
         self.assertNotIn('nvidia-smi.exe', calls)
 
     def test_negative_errors_stop_installation(self):
-        for marker in ('-m | venv', '-r | requirements.txt', '-m | pip | check', 'import app'):
+        for marker in ('-m | venv', 'tools\\install_torch.py', '-r | requirements.txt', '-m | pip | check', 'import app'):
             with self.subTest(failure=marker):
                 code, output, calls, _ = self.run_script(TEST_FAIL_CONTAINS=marker)
                 self.assertEqual(code, 1, output)

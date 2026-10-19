@@ -1,0 +1,61 @@
+name: Windows clean installation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '*.bat'
+      - '*.py'
+      - 'requirements.txt'
+      - 'tools/install_torch.py'
+      - 'tests/**'
+      - '.github/workflows/windows-install.yml'
+  pull_request:
+    paths:
+      - '*.bat'
+      - '*.py'
+      - 'requirements.txt'
+      - 'tools/install_torch.py'
+      - 'tests/**'
+      - '.github/workflows/windows-install.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  clean-install:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+        python: ['3.10', '3.11', '3.12', '3.13']
+        include:
+          - os: windows-2022
+            python: '3.11'
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    env:
+      IMAGEEDIT_NO_PAUSE: '1'
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          architecture: x64
+      - name: Install into a new project environment using the public BAT
+        shell: pwsh
+        run: |
+          $env:IMAGEEDIT_PYTHON = (Get-Command python).Source
+          & .\安装环境.bat cpu
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Run project and installer regression checks
+        shell: pwsh
+        run: |
+          & .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Validate local sample manifest without downloading models
+        shell: pwsh
+        run: |
+          & .\.venv\Scripts\python.exe dataset.py validate --split dev
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
