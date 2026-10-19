@@ -1,5 +1,6 @@
 # Rebuild environments and weights locally.
 .venv/
+.venv.backup_*/
 venv/
 models/
 models_extra/
