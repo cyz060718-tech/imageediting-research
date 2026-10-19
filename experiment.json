@@ -1,0 +1,13 @@
+{
+  "steps":30,
+  "guidance":9.0,
+  "strength":null,
+  "mask_threshold":0.4,
+  "dilate":15,
+  "feather":21,
+  "seeds":[42],
+  "methods":["ours","quality","ip2p"],
+  "mask_backend":"grounded_sam",
+  "learned_metrics":false,
+  "warmup":true
+}

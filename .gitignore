@@ -1,0 +1,28 @@
+# Rebuild environments and weights locally.
+.venv/
+venv/
+models/
+models_extra/
+outputs/
+data/source_cache/
+data/test_lock.json
+data/manifest.before_*.json
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.log
+*.tmp
+*.download
+# Local credentials and editor state.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

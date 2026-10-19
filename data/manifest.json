@@ -1,0 +1,4110 @@
+[
+  {
+    "id": "dev_cat_replace",
+    "image": "images/cat.jpg",
+    "instruction": "把猫换成老虎",
+    "action": "replace",
+    "split": "dev",
+    "eval_text": "tigers on a pink sofa",
+    "source_group": "original_cat",
+    "difficulty": "multiple_instances",
+    "gt_mask": null,
+    "gt_reviewed": false,
+    "notes": "已有原型案例，仅供调试。两只猫的数量保持作为挑战项。"
+  },
+  {
+    "id": "dev_street_remove",
+    "image": "images/street.jpg",
+    "instruction": "去掉停车标志",
+    "action": "remove",
+    "split": "dev",
+    "eval_text": "a street with trees and sky, without a stop sign",
+    "source_group": "original_street",
+    "difficulty": "complex_background",
+    "gt_mask": null,
+    "gt_reviewed": false,
+    "notes": "标注前明确删除牌面还是连同支撑杆删除。"
+  },
+  {
+    "id": "dev_person_color",
+    "image": "images/person.jpg",
+    "instruction": "把外套换成蓝色",
+    "action": "color",
+    "split": "dev",
+    "eval_text": "a skier wearing a blue jacket on white snow",
+    "source_group": "original_person",
+    "difficulty": "simple",
+    "gt_mask": null,
+    "gt_reviewed": false,
+    "notes": "检查衣服款式、脸部、姿态及雪地是否保留。"
+  },
+  {
+    "id": "coco_dev_color_000000057149",
+    "image": "images/coco/000000057149.jpg",
+    "instruction": "change the train to blue",
+    "action": "color",
+    "split": "dev",
+    "eval_text": "a photograph of blue train in the original scene",
+    "source_group": "coco_val2017_57149",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000057149.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 57149,
+    "coco_annotation_ids": [
+      172485
+    ],
+    "target_category": "train",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000057149.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8505/8541387897_fbf4b3050a_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.039648672163069144
+  },
+  {
+    "id": "coco_dev_color_000000139260",
+    "image": "images/coco/000000139260.jpg",
+    "instruction": "change the bowl to blue",
+    "action": "color",
+    "split": "dev",
+    "eval_text": "a photograph of blue bowl in the original scene",
+    "source_group": "coco_val2017_139260",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000139260.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 139260,
+    "coco_annotation_ids": [
+      1539730
+    ],
+    "target_category": "bowl",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000139260.jpg",
+    "flickr_url": "http://farm7.staticflickr.com/6207/6103352201_fceaa1fe8f_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0066795615731785945
+  },
+  {
+    "id": "coco_dev_color_000000242934",
+    "image": "images/coco/000000242934.jpg",
+    "instruction": "change the couch to blue",
+    "action": "color",
+    "split": "dev",
+    "eval_text": "a photograph of blue couch in the original scene",
+    "source_group": "coco_val2017_242934",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000242934.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 242934,
+    "coco_annotation_ids": [
+      114533
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000242934.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3149/3286061741_19b7c32167_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0826852451933463
+  },
+  {
+    "id": "coco_dev_color_000000260470",
+    "image": "images/coco/000000260470.jpg",
+    "instruction": "change the car to red",
+    "action": "color",
+    "split": "dev",
+    "eval_text": "a photograph of red car in the original scene",
+    "source_group": "coco_val2017_260470",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000260470.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 260470,
+    "coco_annotation_ids": [
+      1782661
+    ],
+    "target_category": "car",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000260470.jpg",
+    "flickr_url": "http://farm8.staticflickr.com/7410/9741947345_655ab2a1ac_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.7259489138219145
+  },
+  {
+    "id": "coco_dev_color_000000397354",
+    "image": "images/coco/000000397354.jpg",
+    "instruction": "change the chairs to blue",
+    "action": "color",
+    "split": "dev",
+    "eval_text": "a photograph of blue chairs in the original scene",
+    "source_group": "coco_val2017_397354",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000397354.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 397354,
+    "coco_annotation_ids": [
+      105198,
+      106351
+    ],
+    "target_category": "chair",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000397354.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/188/410311643_a3c829f3c7_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0106441347525513
+  },
+  {
+    "id": "coco_dev_color_000000533206",
+    "image": "images/coco/000000533206.jpg",
+    "instruction": "change the bowl to blue",
+    "action": "color",
+    "split": "dev",
+    "eval_text": "a photograph of blue bowl in the original scene",
+    "source_group": "coco_val2017_533206",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000533206.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 533206,
+    "coco_annotation_ids": [
+      713008
+    ],
+    "target_category": "bowl",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000533206.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3048/2344619541_817c0410df_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0
+  },
+  {
+    "id": "coco_dev_remove_000000029397",
+    "image": "images/coco/000000029397.jpg",
+    "instruction": "remove the bench",
+    "action": "remove",
+    "split": "dev",
+    "eval_text": "a natural scene without bench, with the background restored",
+    "source_group": "coco_val2017_29397",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000029397.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 29397,
+    "coco_annotation_ids": [
+      575411
+    ],
+    "target_category": "bench",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000029397.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8066/8199388944_a7499fe90c_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_dev_remove_000000121506",
+    "image": "images/coco/000000121506.jpg",
+    "instruction": "remove the umbrella",
+    "action": "remove",
+    "split": "dev",
+    "eval_text": "a natural scene without umbrella, with the background restored",
+    "source_group": "coco_val2017_121506",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000121506.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 121506,
+    "coco_annotation_ids": [
+      283775
+    ],
+    "target_category": "umbrella",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000121506.jpg",
+    "flickr_url": "http://farm8.staticflickr.com/7116/7721233008_99b07f96b1_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_dev_remove_000000172595",
+    "image": "images/coco/000000172595.jpg",
+    "instruction": "remove the backpack",
+    "action": "remove",
+    "split": "dev",
+    "eval_text": "a natural scene without backpack, with the background restored",
+    "source_group": "coco_val2017_172595",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000172595.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 172595,
+    "coco_annotation_ids": [
+      2073019
+    ],
+    "target_category": "backpack",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000172595.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2090/2984548986_cc725122ed_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_dev_remove_000000273132",
+    "image": "images/coco/000000273132.jpg",
+    "instruction": "remove the handbag",
+    "action": "remove",
+    "split": "dev",
+    "eval_text": "a natural scene without handbag, with the background restored",
+    "source_group": "coco_val2017_273132",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000273132.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 273132,
+    "coco_annotation_ids": [
+      1835617
+    ],
+    "target_category": "handbag",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000273132.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3691/9432612125_11622614ef_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_dev_remove_000000480936",
+    "image": "images/coco/000000480936.jpg",
+    "instruction": "remove the chairs",
+    "action": "remove",
+    "split": "dev",
+    "eval_text": "a natural scene without chairs, with the background restored",
+    "source_group": "coco_val2017_480936",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000480936.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 480936,
+    "coco_annotation_ids": [
+      385071,
+      1585112
+    ],
+    "target_category": "chair",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000480936.jpg",
+    "flickr_url": "http://farm2.staticflickr.com/1154/560533087_715b92d751_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_dev_remove_000000548780",
+    "image": "images/coco/000000548780.jpg",
+    "instruction": "remove the bench",
+    "action": "remove",
+    "split": "dev",
+    "eval_text": "a natural scene without bench, with the background restored",
+    "source_group": "coco_val2017_548780",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000548780.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 548780,
+    "coco_annotation_ids": [
+      576601
+    ],
+    "target_category": "bench",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000548780.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8451/8030321271_ebc4c4820c_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_dev_replace_000000016228",
+    "image": "images/coco/000000016228.jpg",
+    "instruction": "replace the horse with zebra",
+    "action": "replace",
+    "split": "dev",
+    "eval_text": "a photograph of 1 zebra in the original scene",
+    "source_group": "coco_val2017_16228",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000016228.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 16228,
+    "coco_annotation_ids": [
+      54058
+    ],
+    "target_category": "horse",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000016228.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3737/10031812195_372ae7538f_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_dev_replace_000000255536",
+    "image": "images/coco/000000255536.jpg",
+    "instruction": "replace the chairs with armchairs",
+    "action": "replace",
+    "split": "dev",
+    "eval_text": "a photograph of 4 armchairs in the original scene",
+    "source_group": "coco_val2017_255536",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000255536.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 255536,
+    "coco_annotation_ids": [
+      105022,
+      107183,
+      108255,
+      109144
+    ],
+    "target_category": "chair",
+    "expected_target_count": 4,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000255536.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/21/28730476_f2d616c829_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_dev_replace_000000419974",
+    "image": "images/coco/000000419974.jpg",
+    "instruction": "replace the cup with bowl",
+    "action": "replace",
+    "split": "dev",
+    "eval_text": "a photograph of 1 bowl in the original scene",
+    "source_group": "coco_val2017_419974",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000419974.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 419974,
+    "coco_annotation_ids": [
+      1880254
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000419974.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3647/3655327694_5e4324ea90_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_dev_replace_000000471869",
+    "image": "images/coco/000000471869.jpg",
+    "instruction": "replace the couch with bench",
+    "action": "replace",
+    "split": "dev",
+    "eval_text": "a photograph of 1 bench in the original scene",
+    "source_group": "coco_val2017_471869",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000471869.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 471869,
+    "coco_annotation_ids": [
+      97823
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000471869.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2112/2499379494_3fe784ffd0_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_dev_replace_000000572408",
+    "image": "images/coco/000000572408.jpg",
+    "instruction": "replace the sheep with cow",
+    "action": "replace",
+    "split": "dev",
+    "eval_text": "a photograph of 1 cow in the original scene",
+    "source_group": "coco_val2017_572408",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000572408.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 572408,
+    "coco_annotation_ids": [
+      2068090
+    ],
+    "target_category": "sheep",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000572408.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8406/8633551289_327525f38b_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_color_000000036844",
+    "image": "images/coco/000000036844.jpg",
+    "instruction": "change the couches to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue couches in the original scene",
+    "source_group": "coco_val2017_36844",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000036844.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 36844,
+    "coco_annotation_ids": [
+      113720,
+      115597
+    ],
+    "target_category": "couch",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000036844.jpg",
+    "flickr_url": "http://farm2.staticflickr.com/1148/1380513519_bf3118f57a_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.023480958493795463
+  },
+  {
+    "id": "coco_test_color_000000055167",
+    "image": "images/coco/000000055167.jpg",
+    "instruction": "change the bus to red",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of red bus in the original scene",
+    "source_group": "coco_val2017_55167",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000055167.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 55167,
+    "coco_annotation_ids": [
+      162860
+    ],
+    "target_category": "bus",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000055167.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2893/9513704274_f4cd1a772f_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.3774884101445323
+  },
+  {
+    "id": "coco_test_color_000000074058",
+    "image": "images/coco/000000074058.jpg",
+    "instruction": "change the bicycles to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue bicycles in the original scene",
+    "source_group": "coco_val2017_74058",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000074058.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 74058,
+    "coco_annotation_ids": [
+      344274,
+      344286
+    ],
+    "target_category": "bicycle",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000074058.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2673/3853738920_ac4ae553f7_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0
+  },
+  {
+    "id": "coco_test_color_000000080949",
+    "image": "images/coco/000000080949.jpg",
+    "instruction": "change the bottle to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue bottle in the original scene",
+    "source_group": "coco_val2017_80949",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000080949.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 80949,
+    "coco_annotation_ids": [
+      1484562
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000080949.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2221/2232846153_5eee9c75fc_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.027967387182404248
+  },
+  {
+    "id": "coco_test_color_000000084664",
+    "image": "images/coco/000000084664.jpg",
+    "instruction": "change the bowl to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue bowl in the original scene",
+    "source_group": "coco_val2017_84664",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000084664.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 84664,
+    "coco_annotation_ids": [
+      1538400
+    ],
+    "target_category": "bowl",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000084664.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8104/8641484887_41d3c201cf_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.002032451475221029
+  },
+  {
+    "id": "coco_test_color_000000085376",
+    "image": "images/coco/000000085376.jpg",
+    "instruction": "change the motorcycle to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue motorcycle in the original scene",
+    "source_group": "coco_val2017_85376",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000085376.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 85376,
+    "coco_annotation_ids": [
+      151487
+    ],
+    "target_category": "motorcycle",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000085376.jpg",
+    "flickr_url": "http://farm8.staticflickr.com/7059/6867232585_0d4ea34bae_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.11388767958206356
+  },
+  {
+    "id": "coco_test_color_000000147725",
+    "image": "images/coco/000000147725.jpg",
+    "instruction": "change the truck to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue truck in the original scene",
+    "source_group": "coco_val2017_147725",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000147725.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 147725,
+    "coco_annotation_ids": [
+      1368729
+    ],
+    "target_category": "truck",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000147725.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8123/8625500680_b86b974d02_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nd/2.0/",
+      "id": 6,
+      "name": "Attribution-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.03291915442956269
+  },
+  {
+    "id": "coco_test_color_000000161032",
+    "image": "images/coco/000000161032.jpg",
+    "instruction": "change the umbrella to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue umbrella in the original scene",
+    "source_group": "coco_val2017_161032",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000161032.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 161032,
+    "coco_annotation_ids": [
+      284705
+    ],
+    "target_category": "umbrella",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000161032.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2614/5754917253_23befc99e4_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0
+  },
+  {
+    "id": "coco_test_color_000000166277",
+    "image": "images/coco/000000166277.jpg",
+    "instruction": "change the cups to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue cups in the original scene",
+    "source_group": "coco_val2017_166277",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000166277.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 166277,
+    "coco_annotation_ids": [
+      1505788,
+      1506565,
+      1511365
+    ],
+    "target_category": "cup",
+    "expected_target_count": 3,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000166277.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/247/522239585_3ad698c8a7_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.195191395128124
+  },
+  {
+    "id": "coco_test_color_000000189820",
+    "image": "images/coco/000000189820.jpg",
+    "instruction": "change the chair to red",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of red chair in the original scene",
+    "source_group": "coco_val2017_189820",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000189820.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 189820,
+    "coco_annotation_ids": [
+      102699
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000189820.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/23/32908206_2fa869b5bf_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.4630167288815153
+  },
+  {
+    "id": "coco_test_color_000000196754",
+    "image": "images/coco/000000196754.jpg",
+    "instruction": "change the chair to red",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of red chair in the original scene",
+    "source_group": "coco_val2017_196754",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000196754.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 196754,
+    "coco_annotation_ids": [
+      2124119
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000196754.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3245/2612355525_fe47109fe5_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.47249393536270445
+  },
+  {
+    "id": "coco_test_color_000000206487",
+    "image": "images/coco/000000206487.jpg",
+    "instruction": "change the bus to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue bus in the original scene",
+    "source_group": "coco_val2017_206487",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000206487.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 206487,
+    "coco_annotation_ids": [
+      165101
+    ],
+    "target_category": "bus",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000206487.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8010/7686978996_27b7fdfdbf_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0011131209127591484
+  },
+  {
+    "id": "coco_test_color_000000207585",
+    "image": "images/coco/000000207585.jpg",
+    "instruction": "change the ties to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue ties in the original scene",
+    "source_group": "coco_val2017_207585",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000207585.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 207585,
+    "coco_annotation_ids": [
+      1840416,
+      1840914
+    ],
+    "target_category": "tie",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000207585.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2341/2681303515_52bb227c35_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.044232922732362824
+  },
+  {
+    "id": "coco_test_color_000000215259",
+    "image": "images/coco/000000215259.jpg",
+    "instruction": "change the couch to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue couch in the original scene",
+    "source_group": "coco_val2017_215259",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000215259.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 215259,
+    "coco_annotation_ids": [
+      113243
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000215259.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/162/384954373_5a59aaabd5_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 8.699434536755111e-05
+  },
+  {
+    "id": "coco_test_color_000000216497",
+    "image": "images/coco/000000216497.jpg",
+    "instruction": "change the couch to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue couch in the original scene",
+    "source_group": "coco_val2017_216497",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000216497.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 216497,
+    "coco_annotation_ids": [
+      111496
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000216497.jpg",
+    "flickr_url": "http://farm8.staticflickr.com/7158/6809308987_c436d66d6b_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0033456391324411627
+  },
+  {
+    "id": "coco_test_color_000000233825",
+    "image": "images/coco/000000233825.jpg",
+    "instruction": "change the couch to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue couch in the original scene",
+    "source_group": "coco_val2017_233825",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000233825.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 233825,
+    "coco_annotation_ids": [
+      114335
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000233825.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4006/4421796357_62f0208d59_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.04168310322156476
+  },
+  {
+    "id": "coco_test_color_000000255824",
+    "image": "images/coco/000000255824.jpg",
+    "instruction": "change the cup to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue cup in the original scene",
+    "source_group": "coco_val2017_255824",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000255824.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 255824,
+    "coco_annotation_ids": [
+      672192
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000255824.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8442/7790991342_22771b4ff8_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.07724284391026365
+  },
+  {
+    "id": "coco_test_color_000000265518",
+    "image": "images/coco/000000265518.jpg",
+    "instruction": "change the cup to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue cup in the original scene",
+    "source_group": "coco_val2017_265518",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000265518.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 265518,
+    "coco_annotation_ids": [
+      669880
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000265518.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8402/8891082669_1e05af4d53_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0001682935038707506
+  },
+  {
+    "id": "coco_test_color_000000272049",
+    "image": "images/coco/000000272049.jpg",
+    "instruction": "change the truck to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue truck in the original scene",
+    "source_group": "coco_val2017_272049",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000272049.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 272049,
+    "coco_annotation_ids": [
+      1196576
+    ],
+    "target_category": "truck",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000272049.jpg",
+    "flickr_url": "http://farm8.staticflickr.com/7248/7449377950_d30deae858_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0036377434442253914
+  },
+  {
+    "id": "coco_test_color_000000307598",
+    "image": "images/coco/000000307598.jpg",
+    "instruction": "change the train to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue train in the original scene",
+    "source_group": "coco_val2017_307598",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000307598.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 307598,
+    "coco_annotation_ids": [
+      169608
+    ],
+    "target_category": "train",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000307598.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2831/9661524828_7222797a90_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.05813594033772557
+  },
+  {
+    "id": "coco_test_color_000000338718",
+    "image": "images/coco/000000338718.jpg",
+    "instruction": "change the cars to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue cars in the original scene",
+    "source_group": "coco_val2017_338718",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000338718.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 338718,
+    "coco_annotation_ids": [
+      352770,
+      354081
+    ],
+    "target_category": "car",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000338718.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/12/18425160_e4eef1d1bd_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.00012071671236656492
+  },
+  {
+    "id": "coco_test_color_000000350122",
+    "image": "images/coco/000000350122.jpg",
+    "instruction": "change the bus to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue bus in the original scene",
+    "source_group": "coco_val2017_350122",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000350122.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 350122,
+    "coco_annotation_ids": [
+      166995
+    ],
+    "target_category": "bus",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000350122.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4122/4886757957_98fc49a770_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.08111639575602363
+  },
+  {
+    "id": "coco_test_color_000000365098",
+    "image": "images/coco/000000365098.jpg",
+    "instruction": "change the boat to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue boat in the original scene",
+    "source_group": "coco_val2017_365098",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000365098.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 365098,
+    "coco_annotation_ids": [
+      177900
+    ],
+    "target_category": "boat",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000365098.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8244/8543547575_f09fe552d6_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.1269170390049511
+  },
+  {
+    "id": "coco_test_color_000000367680",
+    "image": "images/coco/000000367680.jpg",
+    "instruction": "change the car to red",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of red car in the original scene",
+    "source_group": "coco_val2017_367680",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000367680.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 367680,
+    "coco_annotation_ids": [
+      133800
+    ],
+    "target_category": "car",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000367680.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/22/34251540_bec994ec35_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.633650438351054
+  },
+  {
+    "id": "coco_test_color_000000377368",
+    "image": "images/coco/000000377368.jpg",
+    "instruction": "change the handbag to red",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of red handbag in the original scene",
+    "source_group": "coco_val2017_377368",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000377368.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 377368,
+    "coco_annotation_ids": [
+      1434027
+    ],
+    "target_category": "handbag",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000377368.jpg",
+    "flickr_url": "http://farm6.staticflickr.com/5293/5538913095_e3c5a908bc_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.7762081784386617
+  },
+  {
+    "id": "coco_test_color_000000382111",
+    "image": "images/coco/000000382111.jpg",
+    "instruction": "change the trucks to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue trucks in the original scene",
+    "source_group": "coco_val2017_382111",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000382111.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 382111,
+    "coco_annotation_ids": [
+      396778,
+      1797778,
+      2051323
+    ],
+    "target_category": "truck",
+    "expected_target_count": 3,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000382111.jpg",
+    "flickr_url": "http://farm7.staticflickr.com/6083/6055128278_1e45691f0a_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.1314722282569339
+  },
+  {
+    "id": "coco_test_color_000000395701",
+    "image": "images/coco/000000395701.jpg",
+    "instruction": "change the couch to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue couch in the original scene",
+    "source_group": "coco_val2017_395701",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000395701.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 395701,
+    "coco_annotation_ids": [
+      112451
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000395701.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3048/4568393462_c1c18cc964_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0
+  },
+  {
+    "id": "coco_test_color_000000396518",
+    "image": "images/coco/000000396518.jpg",
+    "instruction": "change the boat to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue boat in the original scene",
+    "source_group": "coco_val2017_396518",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000396518.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 396518,
+    "coco_annotation_ids": [
+      176752
+    ],
+    "target_category": "boat",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000396518.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2120/2135476444_0625b30180_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.053129647154251725
+  },
+  {
+    "id": "coco_test_color_000000435208",
+    "image": "images/coco/000000435208.jpg",
+    "instruction": "change the couch to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue couch in the original scene",
+    "source_group": "coco_val2017_435208",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000435208.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 435208,
+    "coco_annotation_ids": [
+      111325
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000435208.jpg",
+    "flickr_url": "http://farm7.staticflickr.com/6008/5996235673_f6734313d7_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0009903747949614682
+  },
+  {
+    "id": "coco_test_color_000000441247",
+    "image": "images/coco/000000441247.jpg",
+    "instruction": "change the backpack to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue backpack in the original scene",
+    "source_group": "coco_val2017_441247",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000441247.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 441247,
+    "coco_annotation_ids": [
+      1828178
+    ],
+    "target_category": "backpack",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000441247.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8150/7567411150_c6fd2d7da5_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.19646408839779006
+  },
+  {
+    "id": "coco_test_color_000000469192",
+    "image": "images/coco/000000469192.jpg",
+    "instruction": "change the truck to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue truck in the original scene",
+    "source_group": "coco_val2017_469192",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000469192.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 469192,
+    "coco_annotation_ids": [
+      395487
+    ],
+    "target_category": "truck",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000469192.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8016/7671708924_54b6fd2c48_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.1035909074270654
+  },
+  {
+    "id": "coco_test_color_000000471023",
+    "image": "images/coco/000000471023.jpg",
+    "instruction": "change the train to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue train in the original scene",
+    "source_group": "coco_val2017_471023",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000471023.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 471023,
+    "coco_annotation_ids": [
+      175151
+    ],
+    "target_category": "train",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000471023.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8154/7465550928_44b5484174_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nd/2.0/",
+      "id": 6,
+      "name": "Attribution-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.015033407572383074
+  },
+  {
+    "id": "coco_test_color_000000481567",
+    "image": "images/coco/000000481567.jpg",
+    "instruction": "change the motorcycle to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue motorcycle in the original scene",
+    "source_group": "coco_val2017_481567",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000481567.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 481567,
+    "coco_annotation_ids": [
+      148596
+    ],
+    "target_category": "motorcycle",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000481567.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8195/8095641878_aefaa95d0f_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.1579885877318117
+  },
+  {
+    "id": "coco_test_color_000000499622",
+    "image": "images/coco/000000499622.jpg",
+    "instruction": "change the motorcycle to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue motorcycle in the original scene",
+    "source_group": "coco_val2017_499622",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000499622.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 499622,
+    "coco_annotation_ids": [
+      151146
+    ],
+    "target_category": "motorcycle",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000499622.jpg",
+    "flickr_url": "http://farm7.staticflickr.com/6158/6183504440_29f4164214_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.07670261548913043
+  },
+  {
+    "id": "coco_test_color_000000513181",
+    "image": "images/coco/000000513181.jpg",
+    "instruction": "change the boats to red",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of red boats in the original scene",
+    "source_group": "coco_val2017_513181",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000513181.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 513181,
+    "coco_annotation_ids": [
+      176031,
+      1377712
+    ],
+    "target_category": "boat",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000513181.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4116/4883585935_330f598ac7_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.691076923076923
+  },
+  {
+    "id": "coco_test_color_000000523807",
+    "image": "images/coco/000000523807.jpg",
+    "instruction": "change the bottles to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue bottles in the original scene",
+    "source_group": "coco_val2017_523807",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000523807.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 523807,
+    "coco_annotation_ids": [
+      89688,
+      91516,
+      1869940
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 3,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000523807.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3177/2925347118_23a1d8663b_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0
+  },
+  {
+    "id": "coco_test_color_000000525083",
+    "image": "images/coco/000000525083.jpg",
+    "instruction": "change the chairs to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue chairs in the original scene",
+    "source_group": "coco_val2017_525083",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000525083.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 525083,
+    "coco_annotation_ids": [
+      104434,
+      105773
+    ],
+    "target_category": "chair",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000525083.jpg",
+    "flickr_url": "http://farm8.staticflickr.com/7086/6946143396_87cfa395b7_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.02386117136659436
+  },
+  {
+    "id": "coco_test_color_000000559543",
+    "image": "images/coco/000000559543.jpg",
+    "instruction": "change the chair to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue chair in the original scene",
+    "source_group": "coco_val2017_559543",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000559543.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 559543,
+    "coco_annotation_ids": [
+      1580399
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000559543.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3084/3167056823_4b3292345b_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.012634053180549434
+  },
+  {
+    "id": "coco_test_color_000000566524",
+    "image": "images/coco/000000566524.jpg",
+    "instruction": "change the train to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue train in the original scene",
+    "source_group": "coco_val2017_566524",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000566524.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 566524,
+    "coco_annotation_ids": [
+      172455
+    ],
+    "target_category": "train",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000566524.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8545/8707217553_ed8fb89032_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.26372960749475044
+  },
+  {
+    "id": "coco_test_color_000000575243",
+    "image": "images/coco/000000575243.jpg",
+    "instruction": "change the cars to blue",
+    "action": "color",
+    "split": "test",
+    "eval_text": "a photograph of blue cars in the original scene",
+    "source_group": "coco_val2017_575243",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000575243.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 575243,
+    "coco_annotation_ids": [
+      348464,
+      356910,
+      361276
+    ],
+    "target_category": "car",
+    "expected_target_count": 3,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000575243.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8220/8280864527_b34f35c043_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "original_blue_fraction_diagnostic": 0.0
+  },
+  {
+    "id": "coco_test_remove_000000125778",
+    "image": "images/coco/000000125778.jpg",
+    "instruction": "remove the chair",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without chair, with the background restored",
+    "source_group": "coco_val2017_125778",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000125778.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 125778,
+    "coco_annotation_ids": [
+      103999
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000125778.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3550/3402362545_886a523955_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000137246",
+    "image": "images/coco/000000137246.jpg",
+    "instruction": "remove the potted plant",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without potted plant, with the background restored",
+    "source_group": "coco_val2017_137246",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000137246.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 137246,
+    "coco_annotation_ids": [
+      1608386
+    ],
+    "target_category": "potted plant",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000137246.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/32/37536658_f1eeb11957_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000146489",
+    "image": "images/coco/000000146489.jpg",
+    "instruction": "remove the bottle",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without bottle, with the background restored",
+    "source_group": "coco_val2017_146489",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000146489.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 146489,
+    "coco_annotation_ids": [
+      86514
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000146489.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3581/5841328823_0f891d5429_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000153529",
+    "image": "images/coco/000000153529.jpg",
+    "instruction": "remove the suitcases",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without suitcases, with the background restored",
+    "source_group": "coco_val2017_153529",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000153529.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 153529,
+    "coco_annotation_ids": [
+      1185677,
+      1185737,
+      1842454
+    ],
+    "target_category": "suitcase",
+    "expected_target_count": 3,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000153529.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/51/179621332_5a103aef98_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nd/2.0/",
+      "id": 6,
+      "name": "Attribution-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000181859",
+    "image": "images/coco/000000181859.jpg",
+    "instruction": "remove the cat",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without cat, with the background restored",
+    "source_group": "coco_val2017_181859",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000181859.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 181859,
+    "coco_annotation_ids": [
+      47665
+    ],
+    "target_category": "cat",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000181859.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3393/3430882393_21bffd2a53_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000189310",
+    "image": "images/coco/000000189310.jpg",
+    "instruction": "remove the chair",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without chair, with the background restored",
+    "source_group": "coco_val2017_189310",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000189310.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 189310,
+    "coco_annotation_ids": [
+      1941953
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000189310.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8148/7375894572_1691d84002_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000190236",
+    "image": "images/coco/000000190236.jpg",
+    "instruction": "remove the chair",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without chair, with the background restored",
+    "source_group": "coco_val2017_190236",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000190236.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 190236,
+    "coco_annotation_ids": [
+      100770
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000190236.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/244/535469198_ee68a4b0c1_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000191580",
+    "image": "images/coco/000000191580.jpg",
+    "instruction": "remove the chair",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without chair, with the background restored",
+    "source_group": "coco_val2017_191580",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000191580.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 191580,
+    "coco_annotation_ids": [
+      1579076
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000191580.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4092/4987532314_ac508c6b1c_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000199771",
+    "image": "images/coco/000000199771.jpg",
+    "instruction": "remove the cups",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without cups, with the background restored",
+    "source_group": "coco_val2017_199771",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000199771.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 199771,
+    "coco_annotation_ids": [
+      681655,
+      683084
+    ],
+    "target_category": "cup",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000199771.jpg",
+    "flickr_url": "http://farm6.staticflickr.com/5035/7115744429_7d4deeb996_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000213033",
+    "image": "images/coco/000000213033.jpg",
+    "instruction": "remove the umbrella",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without umbrella, with the background restored",
+    "source_group": "coco_val2017_213033",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000213033.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 213033,
+    "coco_annotation_ids": [
+      282459
+    ],
+    "target_category": "umbrella",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000213033.jpg",
+    "flickr_url": "http://farm8.staticflickr.com/7432/9152238734_d0dd381aa5_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000213593",
+    "image": "images/coco/000000213593.jpg",
+    "instruction": "remove the stop sign",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without stop sign, with the background restored",
+    "source_group": "coco_val2017_213593",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000213593.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 213593,
+    "coco_annotation_ids": [
+      270333
+    ],
+    "target_category": "stop sign",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000213593.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4053/4361110375_398d18c063_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000226147",
+    "image": "images/coco/000000226147.jpg",
+    "instruction": "remove the handbags",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without handbags, with the background restored",
+    "source_group": "coco_val2017_226147",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000226147.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 226147,
+    "coco_annotation_ids": [
+      1173209,
+      1437039,
+      1833133
+    ],
+    "target_category": "handbag",
+    "expected_target_count": 3,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000226147.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4047/4650252315_a203496559_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000233370",
+    "image": "images/coco/000000233370.jpg",
+    "instruction": "remove the suitcase",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without suitcase, with the background restored",
+    "source_group": "coco_val2017_233370",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000233370.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 233370,
+    "coco_annotation_ids": [
+      1183153
+    ],
+    "target_category": "suitcase",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000233370.jpg",
+    "flickr_url": "http://farm8.staticflickr.com/7199/6981874273_f285449370_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000245576",
+    "image": "images/coco/000000245576.jpg",
+    "instruction": "remove the cat",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without cat, with the background restored",
+    "source_group": "coco_val2017_245576",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000245576.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 245576,
+    "coco_annotation_ids": [
+      52882
+    ],
+    "target_category": "cat",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000245576.jpg",
+    "flickr_url": "http://farm2.staticflickr.com/1029/537440819_40da8b20b0_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000251572",
+    "image": "images/coco/000000251572.jpg",
+    "instruction": "remove the dog",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without dog, with the background restored",
+    "source_group": "coco_val2017_251572",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000251572.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 251572,
+    "coco_annotation_ids": [
+      2187
+    ],
+    "target_category": "dog",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000251572.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4018/4534529657_46ba4b48a8_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000279145",
+    "image": "images/coco/000000279145.jpg",
+    "instruction": "remove the bench",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without bench, with the background restored",
+    "source_group": "coco_val2017_279145",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000279145.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 279145,
+    "coco_annotation_ids": [
+      574838
+    ],
+    "target_category": "bench",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000279145.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4057/4597170077_ba86f04dab_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000314264",
+    "image": "images/coco/000000314264.jpg",
+    "instruction": "remove the potted plants",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without potted plants, with the background restored",
+    "source_group": "coco_val2017_314264",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000314264.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 314264,
+    "coco_annotation_ids": [
+      21529,
+      21538
+    ],
+    "target_category": "potted plant",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000314264.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3223/4565494785_75f127bf61_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000320554",
+    "image": "images/coco/000000320554.jpg",
+    "instruction": "remove the bench",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without bench, with the background restored",
+    "source_group": "coco_val2017_320554",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000320554.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 320554,
+    "coco_annotation_ids": [
+      572948
+    ],
+    "target_category": "bench",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000320554.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2465/3685293447_ae7122dc8e_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nd/2.0/",
+      "id": 6,
+      "name": "Attribution-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000327769",
+    "image": "images/coco/000000327769.jpg",
+    "instruction": "remove the cups",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without cups, with the background restored",
+    "source_group": "coco_val2017_327769",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000327769.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 327769,
+    "coco_annotation_ids": [
+      1878644,
+      1880184
+    ],
+    "target_category": "cup",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000327769.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/207/501495782_5d0ed9299e_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000333772",
+    "image": "images/coco/000000333772.jpg",
+    "instruction": "remove the chair",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without chair, with the background restored",
+    "source_group": "coco_val2017_333772",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000333772.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 333772,
+    "coco_annotation_ids": [
+      2123518
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000333772.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4038/4212612461_ca16f4e7fb_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000338901",
+    "image": "images/coco/000000338901.jpg",
+    "instruction": "remove the dog",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without dog, with the background restored",
+    "source_group": "coco_val2017_338901",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000338901.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 338901,
+    "coco_annotation_ids": [
+      14356
+    ],
+    "target_category": "dog",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000338901.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3220/3098425884_0dfc6b86d5_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000346232",
+    "image": "images/coco/000000346232.jpg",
+    "instruction": "remove the umbrellas",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without umbrellas, with the background restored",
+    "source_group": "coco_val2017_346232",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000346232.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 346232,
+    "coco_annotation_ids": [
+      1424823,
+      2075114
+    ],
+    "target_category": "umbrella",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000346232.jpg",
+    "flickr_url": "http://farm7.staticflickr.com/6027/5934273798_7f18a01aa8_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000370478",
+    "image": "images/coco/000000370478.jpg",
+    "instruction": "remove the backpack",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without backpack, with the background restored",
+    "source_group": "coco_val2017_370478",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000370478.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 370478,
+    "coco_annotation_ids": [
+      1164368
+    ],
+    "target_category": "backpack",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000370478.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2277/2181484720_d54e4d655e_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000385029",
+    "image": "images/coco/000000385029.jpg",
+    "instruction": "remove the bottles",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without bottles, with the background restored",
+    "source_group": "coco_val2017_385029",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000385029.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 385029,
+    "coco_annotation_ids": [
+      83467,
+      85293
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000385029.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4061/4670536748_8c7bd89494_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000385997",
+    "image": "images/coco/000000385997.jpg",
+    "instruction": "remove the potted plant",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without potted plant, with the background restored",
+    "source_group": "coco_val2017_385997",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000385997.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 385997,
+    "coco_annotation_ids": [
+      19199
+    ],
+    "target_category": "potted plant",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000385997.jpg",
+    "flickr_url": "http://farm7.staticflickr.com/6196/6121203200_016b952f4e_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000388903",
+    "image": "images/coco/000000388903.jpg",
+    "instruction": "remove the suitcase",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without suitcase, with the background restored",
+    "source_group": "coco_val2017_388903",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000388903.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 388903,
+    "coco_annotation_ids": [
+      1444348
+    ],
+    "target_category": "suitcase",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000388903.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4020/4417675093_995152070f_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000422836",
+    "image": "images/coco/000000422836.jpg",
+    "instruction": "remove the suitcase",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without suitcase, with the background restored",
+    "source_group": "coco_val2017_422836",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000422836.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 422836,
+    "coco_annotation_ids": [
+      1841792
+    ],
+    "target_category": "suitcase",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000422836.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2125/2689742241_f5d1ae8b20_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000442306",
+    "image": "images/coco/000000442306.jpg",
+    "instruction": "remove the umbrella",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without umbrella, with the background restored",
+    "source_group": "coco_val2017_442306",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000442306.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 442306,
+    "coco_annotation_ids": [
+      280878
+    ],
+    "target_category": "umbrella",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000442306.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3785/9771725551_51ca96beee_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000460494",
+    "image": "images/coco/000000460494.jpg",
+    "instruction": "remove the cup",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without cup, with the background restored",
+    "source_group": "coco_val2017_460494",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000460494.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 460494,
+    "coco_annotation_ids": [
+      1877911
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000460494.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/43/106359933_8ba0d1ac1f_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000463527",
+    "image": "images/coco/000000463527.jpg",
+    "instruction": "remove the cup",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without cup, with the background restored",
+    "source_group": "coco_val2017_463527",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000463527.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 463527,
+    "coco_annotation_ids": [
+      671572
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000463527.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2547/4100676417_25799a0a4e_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000494634",
+    "image": "images/coco/000000494634.jpg",
+    "instruction": "remove the cat",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without cat, with the background restored",
+    "source_group": "coco_val2017_494634",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000494634.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 494634,
+    "coco_annotation_ids": [
+      48094
+    ],
+    "target_category": "cat",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000494634.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/30/65183646_11d827007f_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000502737",
+    "image": "images/coco/000000502737.jpg",
+    "instruction": "remove the cup",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without cup, with the background restored",
+    "source_group": "coco_val2017_502737",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000502737.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 502737,
+    "coco_annotation_ids": [
+      1883743
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000502737.jpg",
+    "flickr_url": "http://farm2.staticflickr.com/1370/1343129188_df1aebda3f_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000517069",
+    "image": "images/coco/000000517069.jpg",
+    "instruction": "remove the bench",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without bench, with the background restored",
+    "source_group": "coco_val2017_517069",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000517069.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 517069,
+    "coco_annotation_ids": [
+      574725
+    ],
+    "target_category": "bench",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000517069.jpg",
+    "flickr_url": "http://farm2.staticflickr.com/1352/1046671269_9122e6a40f_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000527784",
+    "image": "images/coco/000000527784.jpg",
+    "instruction": "remove the bottles",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without bottles, with the background restored",
+    "source_group": "coco_val2017_527784",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000527784.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 527784,
+    "coco_annotation_ids": [
+      78676,
+      80410
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000527784.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3110/2291542385_92312a2810_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000532129",
+    "image": "images/coco/000000532129.jpg",
+    "instruction": "remove the cup",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without cup, with the background restored",
+    "source_group": "coco_val2017_532129",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000532129.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 532129,
+    "coco_annotation_ids": [
+      681112
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000532129.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2036/2272800534_66b75a14f7_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000554291",
+    "image": "images/coco/000000554291.jpg",
+    "instruction": "remove the dog",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without dog, with the background restored",
+    "source_group": "coco_val2017_554291",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000554291.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 554291,
+    "coco_annotation_ids": [
+      1817465
+    ],
+    "target_category": "dog",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000554291.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/103/256248429_ebcfe37830_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000562561",
+    "image": "images/coco/000000562561.jpg",
+    "instruction": "remove the dogs",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without dogs, with the background restored",
+    "source_group": "coco_val2017_562561",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000562561.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 562561,
+    "coco_annotation_ids": [
+      2901,
+      14990
+    ],
+    "target_category": "dog",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000562561.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2428/3584739412_c82ec72682_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000564091",
+    "image": "images/coco/000000564091.jpg",
+    "instruction": "remove the handbag",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without handbag, with the background restored",
+    "source_group": "coco_val2017_564091",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000564091.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 564091,
+    "coco_annotation_ids": [
+      1834162
+    ],
+    "target_category": "handbag",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000564091.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3271/2587900333_8f616f59a9_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000570782",
+    "image": "images/coco/000000570782.jpg",
+    "instruction": "remove the bottle",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without bottle, with the background restored",
+    "source_group": "coco_val2017_570782",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000570782.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 570782,
+    "coco_annotation_ids": [
+      1483066
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000570782.jpg",
+    "flickr_url": "http://farm2.staticflickr.com/1398/819859740_a26b28d33c_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_remove_000000572678",
+    "image": "images/coco/000000572678.jpg",
+    "instruction": "remove the potted plants",
+    "action": "remove",
+    "split": "test",
+    "eval_text": "a natural scene without potted plants, with the background restored",
+    "source_group": "coco_val2017_572678",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000572678.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 572678,
+    "coco_annotation_ids": [
+      1954335,
+      1954444
+    ],
+    "target_category": "potted plant",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000572678.jpg",
+    "flickr_url": "http://farm7.staticflickr.com/6018/5938764992_22789ce812_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000026564",
+    "image": "images/coco/000000026564.jpg",
+    "instruction": "replace the bottle with vase",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 vase in the original scene",
+    "source_group": "coco_val2017_26564",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000026564.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 26564,
+    "coco_annotation_ids": [
+      91799
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000026564.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/51/149499288_0eb1172e1d_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000050380",
+    "image": "images/coco/000000050380.jpg",
+    "instruction": "replace the chair with armchair",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 armchair in the original scene",
+    "source_group": "coco_val2017_50380",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000050380.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 50380,
+    "coco_annotation_ids": [
+      102188
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000050380.jpg",
+    "flickr_url": "http://farm6.staticflickr.com/5446/9489694276_e64d3c535b_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000052891",
+    "image": "images/coco/000000052891.jpg",
+    "instruction": "replace the dog with cat",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 cat in the original scene",
+    "source_group": "coco_val2017_52891",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000052891.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 52891,
+    "coco_annotation_ids": [
+      13820
+    ],
+    "target_category": "dog",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000052891.jpg",
+    "flickr_url": "http://farm6.staticflickr.com/5144/5615897624_7d79b89801_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000084362",
+    "image": "images/coco/000000084362.jpg",
+    "instruction": "replace the cat with dog",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 dog in the original scene",
+    "source_group": "coco_val2017_84362",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000084362.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 84362,
+    "coco_annotation_ids": [
+      49927
+    ],
+    "target_category": "cat",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000084362.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3529/3286653136_27cd84dfd8_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000091500",
+    "image": "images/coco/000000091500.jpg",
+    "instruction": "replace the chairs with armchairs",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 4 armchairs in the original scene",
+    "source_group": "coco_val2017_91500",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000091500.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 91500,
+    "coco_annotation_ids": [
+      376831,
+      377718,
+      2124274,
+      2124663
+    ],
+    "target_category": "chair",
+    "expected_target_count": 4,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000091500.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2775/4518345389_57a4fecbb9_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000102707",
+    "image": "images/coco/000000102707.jpg",
+    "instruction": "replace the cup with bowl",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 bowl in the original scene",
+    "source_group": "coco_val2017_102707",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000102707.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 102707,
+    "coco_annotation_ids": [
+      676264
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000102707.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3747/8928536562_e8168d2752_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000106235",
+    "image": "images/coco/000000106235.jpg",
+    "instruction": "replace the couch with bench",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 bench in the original scene",
+    "source_group": "coco_val2017_106235",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000106235.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 106235,
+    "coco_annotation_ids": [
+      116294
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000106235.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4044/4255809560_4763ac28e1_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000106389",
+    "image": "images/coco/000000106389.jpg",
+    "instruction": "replace the chair with armchair",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 armchair in the original scene",
+    "source_group": "coco_val2017_106389",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000106389.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 106389,
+    "coco_annotation_ids": [
+      101860
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000106389.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4017/4278927665_f44d019d80_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000139872",
+    "image": "images/coco/000000139872.jpg",
+    "instruction": "replace the dog with cat",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 cat in the original scene",
+    "source_group": "coco_val2017_139872",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000139872.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 139872,
+    "coco_annotation_ids": [
+      3172
+    ],
+    "target_category": "dog",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000139872.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/92/260183330_494bd996d8_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000145781",
+    "image": "images/coco/000000145781.jpg",
+    "instruction": "replace the bottles with vases",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 2 vases in the original scene",
+    "source_group": "coco_val2017_145781",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000145781.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 145781,
+    "coco_annotation_ids": [
+      88548,
+      92548
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000145781.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/21/90089649_a1924cf6b4_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000156372",
+    "image": "images/coco/000000156372.jpg",
+    "instruction": "replace the chair with armchair",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 armchair in the original scene",
+    "source_group": "coco_val2017_156372",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000156372.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 156372,
+    "coco_annotation_ids": [
+      102277
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000156372.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2519/4131167338_3e084f9bf1_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000157418",
+    "image": "images/coco/000000157418.jpg",
+    "instruction": "replace the bottle with vase",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 vase in the original scene",
+    "source_group": "coco_val2017_157418",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000157418.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 157418,
+    "coco_annotation_ids": [
+      88408
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000157418.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3227/2986581771_0c4664923f_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000158945",
+    "image": "images/coco/000000158945.jpg",
+    "instruction": "replace the chair with armchair",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 armchair in the original scene",
+    "source_group": "coco_val2017_158945",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000158945.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 158945,
+    "coco_annotation_ids": [
+      2123306
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000158945.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4124/5072296382_e96d46c3cf_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000182417",
+    "image": "images/coco/000000182417.jpg",
+    "instruction": "replace the cup with bowl",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 bowl in the original scene",
+    "source_group": "coco_val2017_182417",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000182417.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 182417,
+    "coco_annotation_ids": [
+      1883482
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000182417.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2151/2100467664_2703dd9ff2_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000202001",
+    "image": "images/coco/000000202001.jpg",
+    "instruction": "replace the couch with bench",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 bench in the original scene",
+    "source_group": "coco_val2017_202001",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000202001.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 202001,
+    "coco_annotation_ids": [
+      112639
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000202001.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2582/4069592097_108bc6f67c_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000210032",
+    "image": "images/coco/000000210032.jpg",
+    "instruction": "replace the chairs with armchairs",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 2 armchairs in the original scene",
+    "source_group": "coco_val2017_210032",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000210032.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 210032,
+    "coco_annotation_ids": [
+      1934751,
+      1936934
+    ],
+    "target_category": "chair",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000210032.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4020/4395778587_9b92f76b94_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000224200",
+    "image": "images/coco/000000224200.jpg",
+    "instruction": "replace the dog with cat",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 cat in the original scene",
+    "source_group": "coco_val2017_224200",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000224200.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 224200,
+    "coco_annotation_ids": [
+      7188
+    ],
+    "target_category": "dog",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000224200.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/21/30530170_a77052c390_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000231831",
+    "image": "images/coco/000000231831.jpg",
+    "instruction": "replace the cat with dog",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 dog in the original scene",
+    "source_group": "coco_val2017_231831",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000231831.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 231831,
+    "coco_annotation_ids": [
+      47009
+    ],
+    "target_category": "cat",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000231831.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2324/2242089027_800a938327_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000235399",
+    "image": "images/coco/000000235399.jpg",
+    "instruction": "replace the dog with cat",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 cat in the original scene",
+    "source_group": "coco_val2017_235399",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000235399.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 235399,
+    "coco_annotation_ids": [
+      11285
+    ],
+    "target_category": "dog",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000235399.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/46/184980151_c4f80187fd_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000244099",
+    "image": "images/coco/000000244099.jpg",
+    "instruction": "replace the horse with zebra",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 zebra in the original scene",
+    "source_group": "coco_val2017_244099",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000244099.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 244099,
+    "coco_annotation_ids": [
+      54218
+    ],
+    "target_category": "horse",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000244099.jpg",
+    "flickr_url": "http://farm6.staticflickr.com/5345/9349041750_746e9abf1a_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000253386",
+    "image": "images/coco/000000253386.jpg",
+    "instruction": "replace the dog with cat",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 cat in the original scene",
+    "source_group": "coco_val2017_253386",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000253386.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 253386,
+    "coco_annotation_ids": [
+      13412
+    ],
+    "target_category": "dog",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000253386.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3196/3037448990_28822471dd_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000331280",
+    "image": "images/coco/000000331280.jpg",
+    "instruction": "replace the horses with zebras",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 2 zebras in the original scene",
+    "source_group": "coco_val2017_331280",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000331280.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 331280,
+    "coco_annotation_ids": [
+      58321,
+      59589
+    ],
+    "target_category": "horse",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000331280.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2335/2441639118_e2e980b723_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000344100",
+    "image": "images/coco/000000344100.jpg",
+    "instruction": "replace the cup with bowl",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 bowl in the original scene",
+    "source_group": "coco_val2017_344100",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000344100.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 344100,
+    "coco_annotation_ids": [
+      1504862
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000344100.jpg",
+    "flickr_url": "http://farm8.staticflickr.com/7022/6715900215_f5afb101db_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000356968",
+    "image": "images/coco/000000356968.jpg",
+    "instruction": "replace the horse with zebra",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 zebra in the original scene",
+    "source_group": "coco_val2017_356968",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000356968.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 356968,
+    "coco_annotation_ids": [
+      55366
+    ],
+    "target_category": "horse",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000356968.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4040/5079168442_a06e49f57a_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000364636",
+    "image": "images/coco/000000364636.jpg",
+    "instruction": "replace the dog with cat",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 cat in the original scene",
+    "source_group": "coco_val2017_364636",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000364636.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 364636,
+    "coco_annotation_ids": [
+      9000
+    ],
+    "target_category": "dog",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000364636.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4022/4501511673_d182888ec0_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nd/2.0/",
+      "id": 6,
+      "name": "Attribution-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000380203",
+    "image": "images/coco/000000380203.jpg",
+    "instruction": "replace the horse with zebra",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 zebra in the original scene",
+    "source_group": "coco_val2017_380203",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000380203.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 380203,
+    "coco_annotation_ids": [
+      54194
+    ],
+    "target_category": "horse",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000380203.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4121/4894742604_c45710ab18_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000413247",
+    "image": "images/coco/000000413247.jpg",
+    "instruction": "replace the bottle with vase",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 vase in the original scene",
+    "source_group": "coco_val2017_413247",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000413247.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 413247,
+    "coco_annotation_ids": [
+      82384
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000413247.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4065/4568885003_f08cd0bbfa_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000464358",
+    "image": "images/coco/000000464358.jpg",
+    "instruction": "replace the chair with armchair",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 armchair in the original scene",
+    "source_group": "coco_val2017_464358",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000464358.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 464358,
+    "coco_annotation_ids": [
+      1933197
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000464358.jpg",
+    "flickr_url": "http://farm1.staticflickr.com/224/474446555_8c2af75370_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000473869",
+    "image": "images/coco/000000473869.jpg",
+    "instruction": "replace the bottles with vases",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 3 vases in the original scene",
+    "source_group": "coco_val2017_473869",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000473869.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 473869,
+    "coco_annotation_ids": [
+      85832,
+      1869187,
+      1870594
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 3,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000473869.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3500/3725168577_4b8a7d72b9_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000506656",
+    "image": "images/coco/000000506656.jpg",
+    "instruction": "replace the horses with zebras",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 3 zebras in the original scene",
+    "source_group": "coco_val2017_506656",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000506656.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 506656,
+    "coco_annotation_ids": [
+      55319,
+      1404443,
+      2210294
+    ],
+    "target_category": "horse",
+    "expected_target_count": 3,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000506656.jpg",
+    "flickr_url": "http://farm9.staticflickr.com/8374/8522696682_a3601fe699_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000515077",
+    "image": "images/coco/000000515077.jpg",
+    "instruction": "replace the couch with bench",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 bench in the original scene",
+    "source_group": "coco_val2017_515077",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000515077.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 515077,
+    "coco_annotation_ids": [
+      1603875
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000515077.jpg",
+    "flickr_url": "http://farm2.staticflickr.com/1293/664518198_b38ff9e6a0_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000520531",
+    "image": "images/coco/000000520531.jpg",
+    "instruction": "replace the chair with armchair",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 armchair in the original scene",
+    "source_group": "coco_val2017_520531",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000520531.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 520531,
+    "coco_annotation_ids": [
+      107150
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000520531.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4062/4340091694_248849448e_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000520871",
+    "image": "images/coco/000000520871.jpg",
+    "instruction": "replace the cup with bowl",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 bowl in the original scene",
+    "source_group": "coco_val2017_520871",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000520871.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 520871,
+    "coco_annotation_ids": [
+      670685
+    ],
+    "target_category": "cup",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000520871.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2548/3711888643_b930d29ec8_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000527427",
+    "image": "images/coco/000000527427.jpg",
+    "instruction": "replace the chair with armchair",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 armchair in the original scene",
+    "source_group": "coco_val2017_527427",
+    "difficulty": "small_target",
+    "gt_mask": "masks/coco/000000527427.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 527427,
+    "coco_annotation_ids": [
+      373174
+    ],
+    "target_category": "chair",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000527427.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3564/3470619108_19b4bd67d1_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000559513",
+    "image": "images/coco/000000559513.jpg",
+    "instruction": "replace the bottles with vases",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 2 vases in the original scene",
+    "source_group": "coco_val2017_559513",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000559513.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 559513,
+    "coco_annotation_ids": [
+      88308,
+      1485184
+    ],
+    "target_category": "bottle",
+    "expected_target_count": 2,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000559513.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3731/8969204913_9087b66bf8_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000563882",
+    "image": "images/coco/000000563882.jpg",
+    "instruction": "replace the chairs with armchairs",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 4 armchairs in the original scene",
+    "source_group": "coco_val2017_563882",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000563882.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 563882,
+    "coco_annotation_ids": [
+      1588244,
+      1931604,
+      1939485,
+      1943535
+    ],
+    "target_category": "chair",
+    "expected_target_count": 4,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000563882.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3321/4605648760_d42dd12aaa_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000568710",
+    "image": "images/coco/000000568710.jpg",
+    "instruction": "replace the couch with bench",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 bench in the original scene",
+    "source_group": "coco_val2017_568710",
+    "difficulty": "complex_background",
+    "gt_mask": "masks/coco/000000568710.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 568710,
+    "coco_annotation_ids": [
+      111353
+    ],
+    "target_category": "couch",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000568710.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3499/4042298432_93197af904_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000569976",
+    "image": "images/coco/000000569976.jpg",
+    "instruction": "replace the chairs with armchairs",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 3 armchairs in the original scene",
+    "source_group": "coco_val2017_569976",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000569976.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 569976,
+    "coco_annotation_ids": [
+      1580748,
+      1582191,
+      2123111
+    ],
+    "target_category": "chair",
+    "expected_target_count": 3,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000569976.jpg",
+    "flickr_url": "http://farm5.staticflickr.com/4093/4737241362_7b60073cae_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000572388",
+    "image": "images/coco/000000572388.jpg",
+    "instruction": "replace the cat with dog",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 1 dog in the original scene",
+    "source_group": "coco_val2017_572388",
+    "difficulty": "simple",
+    "gt_mask": "masks/coco/000000572388.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 572388,
+    "coco_annotation_ids": [
+      1816556
+    ],
+    "target_category": "cat",
+    "expected_target_count": 1,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000572388.jpg",
+    "flickr_url": "http://farm4.staticflickr.com/3551/3312267132_0a998bdf0b_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  },
+  {
+    "id": "coco_test_replace_000000580418",
+    "image": "images/coco/000000580418.jpg",
+    "instruction": "replace the cows with horses",
+    "action": "replace",
+    "split": "test",
+    "eval_text": "a photograph of 4 horses in the original scene",
+    "source_group": "coco_val2017_580418",
+    "difficulty": "multiple_instances",
+    "gt_mask": "masks/coco/000000580418.png",
+    "gt_reviewed": true,
+    "gt_review_basis": "COCO provider human instance annotations, CRC-verified official source; not newly hand-labeled locally",
+    "local_human_review": false,
+    "dataset": "COCO val2017",
+    "coco_image_id": 580418,
+    "coco_annotation_ids": [
+      75764,
+      76098,
+      76348,
+      1819554
+    ],
+    "target_category": "cow",
+    "expected_target_count": 4,
+    "source_url": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000580418.jpg",
+    "flickr_url": "http://farm3.staticflickr.com/2104/1809331550_7750b413ba_z.jpg",
+    "license": {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+  }
+]

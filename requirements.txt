@@ -1,0 +1,13 @@
+# Install torch and torchvision separately using the official PyTorch selector.
+diffusers==0.41.0
+transformers==5.20.1
+accelerate==1.15.0
+safetensors==0.8.0
+huggingface-hub==1.33.0
+gradio==5.50.0
+opencv-python-headless==5.0.0.93
+lpips==0.1.4
+numpy==2.2.6
+pillow==11.3.0
+pycocotools==2.0.11
+# Optional OpenAI-compatible instruction parsing: pip install openai

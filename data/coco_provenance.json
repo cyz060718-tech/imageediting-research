@@ -1,0 +1,13 @@
+{
+  "seed": 20261018,
+  "annotation_source": "https://s3.amazonaws.com/images.cocodataset.org/annotations/annotations_trainval2017.zip",
+  "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+  "gt_definition": "COCO human polygon union for all non-crowd target instances; no prediction-derived labels",
+  "selection": "unique image IDs, per-task strata, pixel and source-group validation, dHash duplicate screen",
+  "counts": {
+    "dev": 20,
+    "test": 120
+  },
+  "local_human_review": false,
+  "provider_annotations_used_as_reference": true
+}

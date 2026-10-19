@@ -1,0 +1,18 @@
+{
+  "split": "dev",
+  "cases": 20,
+  "generated": 20,
+  "native_size_preserved": 20,
+  "inputs_match_original_pixels": 20,
+  "protected_pixels_exact": 20,
+  "action_counts": {
+    "color": 7,
+    "remove": 7,
+    "replace": 6
+  },
+  "replacement_automatic_review_required": [
+    "coco_dev_replace_000000419974",
+    "coco_dev_replace_000000572408"
+  ],
+  "note": "Generated / detector confirmed are not semantic success. Visual review and independent evaluation are separate."
+}
