@@ -8,6 +8,7 @@ on:
       - '*.py'
       - 'requirements.txt'
       - 'tools/install_torch.py'
+      - 'tools/check_web_start.py'
       - 'tests/**'
       - '.github/workflows/windows-install.yml'
   pull_request:
@@ -16,6 +17,7 @@ on:
       - '*.py'
       - 'requirements.txt'
       - 'tools/install_torch.py'
+      - 'tools/check_web_start.py'
       - 'tests/**'
       - '.github/workflows/windows-install.yml'
 
@@ -38,11 +40,15 @@ jobs:
       IMAGEEDIT_NO_PAUSE: '1'
       PYTHONUTF8: '1'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python }}
           architecture: x64
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            tools/install_torch.py
       - name: Install into a new project environment using the public BAT
         shell: pwsh
         run: |
@@ -53,6 +59,11 @@ jobs:
         shell: pwsh
         run: |
           & .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Start the actual web app and verify local HTTP
+        shell: pwsh
+        run: |
+          & .\.venv\Scripts\python.exe tools/check_web_start.py
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Validate local sample manifest without downloading models
         shell: pwsh

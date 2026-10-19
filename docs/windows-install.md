@@ -75,7 +75,7 @@ set "HF_ENDPOINT=https://huggingface.co"
 
 `安装环境.bat` 的最后一步导入网页与全部必要依赖，并执行实际计算；出现 `SUCCESS` 表示这次环境检查完成。它不代表已经下载模型或验证过所有编辑效果。下载脚本也必须成功完成，才能启动对应网页模式。
 
-仓库的 `Windows clean installation` 自动检查会在干净的 GitHub Windows runner 上，用 3.10、3.11、3.12、3.13 分别运行公开安装 BAT 的 CPU 路径，随后执行回归测试和开发样本校验；另设 Windows Server 2022 与 Python 3.11 组合。结果见仓库 Actions。云端 runner 没有 NVIDIA 显卡，所以 GPU 选择与回退另有离线测试，真实 CUDA 验证仅覆盖实际执行过的硬件，不能冒充所有显卡实测。
+仓库的 `Windows clean installation` 自动检查会在干净的 GitHub Windows runner 上，用 3.10、3.11、3.12、3.13 分别运行公开安装 BAT 的 CPU 路径，随后执行回归测试、启动真实网页并验证本地 HTTP、校验开发样本；另设 Windows Server 2022 与 Python 3.11 组合。结果见仓库 Actions。云端 runner 没有 NVIDIA 显卡，所以 GPU 选择与回退另有离线测试，真实 CUDA 验证仅覆盖实际执行过的硬件，不能冒充所有显卡实测。
 
 维护者检查命令：
 

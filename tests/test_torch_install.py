@@ -6,6 +6,14 @@ from tools import install_torch as setup
 
 
 class TorchSelectionTests(unittest.TestCase):
+    @patch.object(setup, 'ensure_torch')
+    def test_helper_refuses_to_modify_a_global_python(self, ensure):
+        with patch.object(setup.sys, 'argv', ['install_torch.py']), \
+                patch.object(setup.sys, 'prefix', 'global-python'), \
+                patch.object(setup.sys, 'base_prefix', 'global-python'):
+            self.assertEqual(setup.main(), 1)
+        ensure.assert_not_called()
+
     def test_hardware_matrix(self):
         cases = [
             ([], 'cpu', '2.11.0'),
@@ -97,6 +105,14 @@ class TorchSelectionTests(unittest.TestCase):
     def test_failed_cpu_install_cannot_report_success(self, install, probe):
         with self.assertRaises(RuntimeError):
             setup.ensure_torch('cpu')
+
+    @patch.object(setup, 'detect_gpus', return_value=[])
+    @patch.object(setup, 'probe', return_value=True)
+    @patch.object(setup, 'install')
+    def test_automatic_cpu_requires_cpu_build_for_app_device_selection(self, install, probe, _):
+        self.assertEqual(setup.ensure_torch(), 'cpu')
+        probe.assert_called_once_with('cpu', require_cpu_build=True)
+        install.assert_not_called()
 
 
 if __name__ == '__main__':

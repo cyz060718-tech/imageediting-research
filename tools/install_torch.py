@@ -68,7 +68,7 @@ def detect_gpus():
     try:
         result = subprocess.run(
             ['nvidia-smi', '--query-gpu=driver_version,compute_cap', '--format=csv,noheader'],
-            capture_output=True, text=True, timeout=20,
+            capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=20,
         )
         if result.returncode != 0:
             return []
@@ -98,8 +98,10 @@ def probe(device, require_cpu_build=False):
         "print('Verified PyTorch',torch.__version__,'torchvision',torchvision.__version__,'on',device)"
     )
     try:
-        result = subprocess.run([sys.executable, '-c', code], cwd=ROOT,
-                                capture_output=True, text=True, timeout=120)
+        env = dict(os.environ, PYTHONUTF8='1', PYTHONIOENCODING='utf-8')
+        result = subprocess.run([sys.executable, '-c', code], cwd=ROOT, env=env,
+                                capture_output=True, text=True, encoding='utf-8',
+                                errors='replace', timeout=120)
         if result.returncode == 0:
             print(result.stdout.strip(), flush=True)
             return True
@@ -131,7 +133,9 @@ def ensure_torch(mode='auto', index_override=None):
         build = Build(channel)
     print('Selected PyTorch channel:', build.channel, flush=True)
     device = 'cpu' if build.channel == 'cpu' else 'cuda'
-    require_cpu = mode == 'cpu' or bool(index_override and build.channel == 'cpu')
+    # The app chooses CUDA from torch.cuda.is_available(). Merely probing a
+    # CUDA build on the CPU would not enforce our automatic CPU decision.
+    require_cpu = device == 'cpu'
     if probe(device, require_cpu_build=require_cpu):
         return device
     if install(build, index_override) and probe(device, require_cpu_build=require_cpu):
@@ -151,6 +155,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('mode', nargs='?', choices=['auto', 'cpu'], default='auto')
     args = parser.parse_args()
+    if sys.prefix == sys.base_prefix or Path(sys.prefix).resolve() != (ROOT / '.venv').resolve():
+        print('ERROR: Run the project install BAT. This helper only modifies the project .venv.',
+              file=sys.stderr, flush=True)
+        return 1
     try:
         ensure_torch(args.mode, os.environ.get('TORCH_INDEX_URL'))
         return 0
