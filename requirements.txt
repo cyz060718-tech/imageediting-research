@@ -4,6 +4,7 @@ transformers==5.20.1
 accelerate==1.15.0
 safetensors==0.8.0
 huggingface-hub==1.33.0
+httpx==0.28.1
 gradio==5.50.0
 opencv-python-headless==5.0.0.93
 lpips==0.1.4

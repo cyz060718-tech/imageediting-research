@@ -73,6 +73,14 @@ set "HF_ENDPOINT=https://huggingface.co"
 
 ## 怎样确认安装情况
 
+如果只有 LaMa 下载失败，已经完成的其他模型可以复用。脚本会保留 TLS 校验并重试 LaMa 下载；也可以从另一台电脑复制已校验的模型，再在项目目录执行以下命令导入，路径替换为你实际的文件位置：
+
+```bat
+.venv\Scripts\python.exe tools\download_lama.py --source "E:\已有模型\big-lama.pt"
+```
+
+离线导入也必须通过官方摘要校验。直接把文件复制到 `models_extra\lama\big-lama.pt` 后，运行下载脚本同样会检查摘要。
+
 `安装环境.bat` 的最后一步导入网页与全部必要依赖，并执行实际计算；出现 `SUCCESS` 表示这次环境检查完成。它不代表已经下载模型或验证过所有编辑效果。下载脚本也必须成功完成，才能启动对应网页模式。
 
 仓库的 `Windows clean installation` 自动检查会在干净的 GitHub Windows runner 上，用 3.10、3.11、3.12、3.13 分别运行公开安装 BAT 的 CPU 路径，随后执行回归测试、启动真实网页并验证本地 HTTP、校验开发样本；另设 Windows Server 2022 与 Python 3.11 组合。结果见仓库 Actions。云端 runner 没有 NVIDIA 显卡，所以 GPU 选择与回退另有离线测试，真实 CUDA 验证仅覆盖实际执行过的硬件，不能冒充所有显卡实测。
