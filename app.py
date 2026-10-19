@@ -17,7 +17,8 @@ from core import editor, masker, metrics
 from core.instruction_parser import parse
 from eval import write_json
 
-EXAMPLES=[[str(dataset.resolve(it['image'])),it['instruction']] for it in dataset.load_items() if it['split']=='dev']
+EXAMPLES=[[str(dataset.resolve(it['image'])),it.get('example_instruction_zh') or it['instruction']]
+          for it in dataset.load_items() if it['split']=='dev']
 
 def select_manual(image, manual, mask_mode):
     if mask_mode == 'auto':

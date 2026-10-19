@@ -10,7 +10,8 @@
     "difficulty": "multiple_instances",
     "gt_mask": null,
     "gt_reviewed": false,
-    "notes": "已有原型案例，仅供调试。两只猫的数量保持作为挑战项。"
+    "notes": "已有原型案例，仅供调试。两只猫的数量保持作为挑战项。",
+    "example_instruction_zh": "把猫换成老虎"
   },
   {
     "id": "dev_street_remove",
@@ -23,7 +24,8 @@
     "difficulty": "complex_background",
     "gt_mask": null,
     "gt_reviewed": false,
-    "notes": "标注前明确删除牌面还是连同支撑杆删除。"
+    "notes": "标注前明确删除牌面还是连同支撑杆删除。",
+    "example_instruction_zh": "去掉停车标志"
   },
   {
     "id": "dev_person_color",
@@ -36,7 +38,8 @@
     "difficulty": "simple",
     "gt_mask": null,
     "gt_reviewed": false,
-    "notes": "检查衣服款式、脸部、姿态及雪地是否保留。"
+    "notes": "检查衣服款式、脸部、姿态及雪地是否保留。",
+    "example_instruction_zh": "把外套换成蓝色"
   },
   {
     "id": "coco_dev_color_000000057149",
@@ -66,7 +69,8 @@
       "name": "Attribution-ShareAlike License"
     },
     "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
-    "original_blue_fraction_diagnostic": 0.039648672163069144
+    "original_blue_fraction_diagnostic": 0.039648672163069144,
+    "example_instruction_zh": "把火车改成蓝色"
   },
   {
     "id": "coco_dev_color_000000139260",
@@ -96,7 +100,8 @@
       "name": "Attribution-NonCommercial-NoDerivs License"
     },
     "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
-    "original_blue_fraction_diagnostic": 0.0066795615731785945
+    "original_blue_fraction_diagnostic": 0.0066795615731785945,
+    "example_instruction_zh": "把碗改成蓝色"
   },
   {
     "id": "coco_dev_color_000000242934",
@@ -126,7 +131,8 @@
       "name": "Attribution-NonCommercial-NoDerivs License"
     },
     "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
-    "original_blue_fraction_diagnostic": 0.0826852451933463
+    "original_blue_fraction_diagnostic": 0.0826852451933463,
+    "example_instruction_zh": "把沙发改成蓝色"
   },
   {
     "id": "coco_dev_color_000000260470",
@@ -156,7 +162,8 @@
       "name": "Attribution-NonCommercial-NoDerivs License"
     },
     "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
-    "original_blue_fraction_diagnostic": 0.7259489138219145
+    "original_blue_fraction_diagnostic": 0.7259489138219145,
+    "example_instruction_zh": "把汽车改成红色"
   },
   {
     "id": "coco_dev_color_000000397354",
@@ -187,7 +194,8 @@
       "name": "Attribution-ShareAlike License"
     },
     "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
-    "original_blue_fraction_diagnostic": 0.0106441347525513
+    "original_blue_fraction_diagnostic": 0.0106441347525513,
+    "example_instruction_zh": "把所有椅子改成蓝色"
   },
   {
     "id": "coco_dev_color_000000533206",
@@ -217,7 +225,8 @@
       "name": "Attribution License"
     },
     "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
-    "original_blue_fraction_diagnostic": 0.0
+    "original_blue_fraction_diagnostic": 0.0,
+    "example_instruction_zh": "把碗改成蓝色"
   },
   {
     "id": "coco_dev_remove_000000029397",
@@ -246,7 +255,8 @@
       "id": 3,
       "name": "Attribution-NonCommercial-NoDerivs License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "删除长凳"
   },
   {
     "id": "coco_dev_remove_000000121506",
@@ -275,7 +285,8 @@
       "id": 4,
       "name": "Attribution License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "删除雨伞"
   },
   {
     "id": "coco_dev_remove_000000172595",
@@ -304,7 +315,8 @@
       "id": 3,
       "name": "Attribution-NonCommercial-NoDerivs License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "删除背包"
   },
   {
     "id": "coco_dev_remove_000000273132",
@@ -333,7 +345,8 @@
       "id": 1,
       "name": "Attribution-NonCommercial-ShareAlike License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "删除手提包"
   },
   {
     "id": "coco_dev_remove_000000480936",
@@ -363,7 +376,8 @@
       "id": 4,
       "name": "Attribution License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "删除所有椅子"
   },
   {
     "id": "coco_dev_remove_000000548780",
@@ -392,7 +406,8 @@
       "id": 5,
       "name": "Attribution-ShareAlike License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "删除长凳"
   },
   {
     "id": "coco_dev_replace_000000016228",
@@ -421,7 +436,8 @@
       "id": 3,
       "name": "Attribution-NonCommercial-NoDerivs License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "把马换成斑马"
   },
   {
     "id": "coco_dev_replace_000000255536",
@@ -453,7 +469,8 @@
       "id": 1,
       "name": "Attribution-NonCommercial-ShareAlike License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "把所有椅子换成扶手椅"
   },
   {
     "id": "coco_dev_replace_000000419974",
@@ -482,7 +499,8 @@
       "id": 2,
       "name": "Attribution-NonCommercial License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "把杯子换成碗"
   },
   {
     "id": "coco_dev_replace_000000471869",
@@ -511,7 +529,8 @@
       "id": 2,
       "name": "Attribution-NonCommercial License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "把沙发换成长凳"
   },
   {
     "id": "coco_dev_replace_000000572408",
@@ -540,7 +559,8 @@
       "id": 3,
       "name": "Attribution-NonCommercial-NoDerivs License"
     },
-    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows."
+    "notes": "Target means all annotated instances of this category. Mask is the union of independent provider polygons. Deletion does not include unannotated supports or shadows.",
+    "example_instruction_zh": "把羊换成牛"
   },
   {
     "id": "coco_test_color_000000036844",

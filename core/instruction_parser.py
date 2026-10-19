@@ -20,6 +20,9 @@ import config
 
 # 常用中文词 -> 英文（够演示用，可自行扩充）
 ZH_EN = {
+    # 网页开发示例中的对象与替换类别
+    "火车": "train", "碗": "bowl", "长凳": "bench", "背包": "backpack",
+    "手提包": "handbag", "斑马": "zebra", "扶手椅": "armchair", "羊": "sheep", "牛": "cow",
     # 物体
     "猫": "cat", "狗": "dog", "人": "person", "男人": "man", "女人": "woman", "女孩": "girl", "男孩": "boy",
     "模特": "model", "衣服": "clothes", "上衣": "shirt", "衬衫": "shirt", "外套": "jacket", "裙子": "dress",
